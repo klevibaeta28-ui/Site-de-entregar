@@ -1,0 +1,20 @@
+/* Animação suave para a notificação toast */
+#toast {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Modal do Professor */
+.prof-modal {
+    background: radial-gradient(circle, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* Botão ultra disfarçado */
+.easter-egg-btn {
+    opacity: 0.3;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.easter-egg-btn:hover {
+    opacity: 1;
+    color: #eab308; /* Amarelo dourado ao passar o mouse */
+} 
