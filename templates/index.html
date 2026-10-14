@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giz &amp; Java — aprenda a programar do zero</title>
+  <meta name="description" content="Aulas curtas e práticas de Java, Python, HTML, CSS e JavaScript.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!--
+    Psiu, curioso(a): este site guarda uma mensagem escondida.
+    Dica: o código-fonte fala a língua de quem ensina. :)
+  -->
+
+  <a class="pular-conteudo" href="#aula">Ir para a aula</a>
+
+  <header class="topo">
+    <button type="button" class="marca" id="marca" aria-label="Giz e Java, início">
+      <span class="marca-chaves" aria-hidden="true">{ }</span>
+      <span class="marca-nome">Giz &amp; Java</span>
+    </button>
+
+    <div class="progresso" role="group" aria-label="Seu progresso">
+      <div class="progresso-trilho" aria-hidden="true">
+        <div class="progresso-barra" id="progresso-barra"></div>
+      </div>
+      <span class="progresso-texto" id="progresso-texto"></span>
+    </div>
+  </header>
+
+  <div class="palco">
+    <nav class="indice" aria-label="Trilhas e aulas">
+      <h2 class="indice-titulo">Trilhas</h2>
+      <ul class="trilhas" id="trilhas"></ul>
+
+      <h2 class="indice-titulo" id="trilha-nome"></h2>
+      <p class="indice-sub" id="trilha-descricao"></p>
+      <ol class="indice-lista" id="indice"></ol>
+    </nav>
+
+    <main class="lousa" id="aula" tabindex="-1" aria-live="polite"></main>
+  </div>
+
+  <footer class="rodape">
+    <p>Java, Python, HTML, CSS e JavaScript, uma aula de cada vez.</p>
+  </footer>
+
+  <!-- Mensagem escondida -->
+  <dialog class="homenagem" id="homenagem" aria-labelledby="homenagem-titulo">
+    <div class="confete" id="confete" aria-hidden="true"></div>
+    <div class="homenagem-cartao">
+      <p class="homenagem-data">15 de outubro · Dia do Professor</p>
+      <h2 id="homenagem-titulo">Para o professor Wilker Luz</h2>
+      <div class="homenagem-texto" id="mensagem"></div>
+      <div class="homenagem-extra" id="extra" hidden></div>
+      <button type="button" class="botao" id="fechar-homenagem">Fechar</button>
+    </div>
+  </dialog>
+
+  <!-- Conteúdo das trilhas: cada arquivo registra uma ou mais trilhas em window.TRILHAS -->
+  <script src="{{ url_for('static', filename='aulas/java.js') }}"></script>
+  <script src="{{ url_for('static', filename='aulas/python.js') }}"></script>
+  <script src="{{ url_for('static', filename='aulas/web.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
